@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">EnglishCards</string>
+
+    <string name="status">Status</string>
+    <string name="cat_present_continuous">Present Continuous</string>
+    <string name="card_type1">+, -, ?</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="bundle_cards_key">cards</string>
+    <string name="bundle_cat_key">category</string>
+    <string name="bundle_card_items_key">card_items</string>
+</resources>

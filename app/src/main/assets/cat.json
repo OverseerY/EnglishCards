@@ -1,0 +1,21 @@
+{
+	"categories": [
+		{"name": "present simple"},
+		{"name": "past simple"},
+		{"name": "present continuous"},
+		{"name": "future simple"},
+		{"name": "future continuous"},
+		{"name": "past continuous"},
+		{"name": "present perfect"},
+		{"name": "past perfect"},
+		{"name": "future perfect"},
+		{"name": "what?"},
+		{"name": "where?"},
+		{"name": "why?"},
+		{"name": "how much?"},
+		{"name": "how long?"},
+		{"name": "how?"},
+		{"name": "how many?"},
+		{"name": "when?"}
+	]
+}

@@ -1,0 +1,248 @@
+{
+	"cards": [
+		{
+			"category": "present simple",
+			"value": "+"
+		},
+		{
+			"category": "present simple",
+			"value": "+,-?"
+		},
+		{
+			"category": "present simple",
+			"value": "-"
+		},
+		{
+			"category": "present simple",
+			"value": "-,+?"
+		},
+		{
+			"category": "present simple",
+			"value": "?"
+		},
+		{
+			"category": "past simple",
+			"value": "+"
+		},
+		{
+			"category": "past simple",
+			"value": "+,-?"
+		},
+		{
+			"category": "past simple",
+			"value": "-"
+		},
+		{
+			"category": "past simple",
+			"value": "-,+?"
+		},
+		{
+			"category": "past simple",
+			"value": "?"
+		},
+		{
+			"category": "present continuous",
+			"value": "+"
+		},
+		{
+			"category": "present continuous",
+			"value": "+,-?"
+		},
+		{
+			"category": "present continuous",
+			"value": "-"
+		},
+		{
+			"category": "present continuous",
+			"value": "-,+?"
+		},
+		{
+			"category": "present continuous",
+			"value": "?"
+		},
+		{
+			"category": "future simple",
+			"value": "+"
+		},
+		{
+			"category": "future simple",
+			"value": "+,-?"
+		},
+		{
+			"category": "future simple",
+			"value": "-"
+		},
+		{
+			"category": "future simple",
+			"value": "-,+?"
+		},
+		{
+			"category": "future simple",
+			"value": "?"
+		},
+		{
+			"category": "future continuous",
+			"value": "+"
+		},
+		{
+			"category": "future continuous",
+			"value": "+,-?"
+		},
+		{
+			"category": "future continuous",
+			"value": "-"
+		},
+		{
+			"category": "future continuous",
+			"value": "-,+?"
+		},
+		{
+			"category": "future continuous",
+			"value": "?"
+		},
+		{
+			"category": "past continuous",
+			"value": "+"
+		},
+		{
+			"category": "past continuous",
+			"value": "+,-?"
+		},
+		{
+			"category": "past continuous",
+			"value": "-"
+		},
+		{
+			"category": "past continuous",
+			"value": "-,+?"
+		},
+		{
+			"category": "past continuous",
+			"value": "?"
+		},
+		{
+			"category": "present perfect",
+			"value": "+"
+		},
+		{
+			"category": "present perfect",
+			"value": "+,-?"
+		},
+		{
+			"category": "present perfect",
+			"value": "-"
+		},
+		{
+			"category": "present perfect",
+			"value": "-,+?"
+		},
+		{
+			"category": "present perfect",
+			"value": "?"
+		},
+		{
+			"category": "past perfect",
+			"value": "+"
+		},
+		{
+			"category": "past perfect",
+			"value": "+,-?"
+		},
+		{
+			"category": "past perfect",
+			"value": "-"
+		},
+		{
+			"category": "past perfect",
+			"value": "-,+?"
+		},
+		{
+			"category": "past perfect",
+			"value": "?"
+		},
+		{
+			"category": "future perfect",
+			"value": "+"
+		},
+		{
+			"category": "future perfect",
+			"value": "+,-?"
+		},
+		{
+			"category": "future perfect",
+			"value": "-"
+		},
+		{
+			"category": "future perfect",
+			"value": "-,+?"
+		},
+		{
+			"category": "future perfect",
+			"value": "?"
+		},
+		{
+			"category": "what?",
+			"value": "action"
+		},
+		{
+			"category": "what?",
+			"value": "without action"
+		},
+		{
+			"category": "where?",
+			"value": "action"
+		},
+		{
+			"category": "where?",
+			"value": "without action"
+		},
+		{
+			"category": "why?",
+			"value": "action"
+		},
+		{
+			"category": "why?",
+			"value": "without action"
+		},
+		{
+			"category": "how much?",
+			"value": "action"
+		},
+		{
+			"category": "how much?",
+			"value": "without action"
+		},
+		{
+			"category": "how long??",
+			"value": "action"
+		},
+		{
+			"category": "how long?",
+			"value": "without action"
+		},
+		{
+			"category": "how?",
+			"value": "action"
+		},
+		{
+			"category": "how?",
+			"value": "without action"
+		},
+		{
+			"category": "how many?",
+			"value": "action"
+		},
+		{
+			"category": "how many?",
+			"value": "without action"
+		},
+		{
+			"category": "when?",
+			"value": "action"
+		},
+		{
+			"category": "when?",
+			"value": "without action"
+		}
+	]
+}
