@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">EnglishCards</string>
+    <string name="app_name">IMM Coaching Cards</string>
+    <string name="app_name_short">IMMC Cards</string>
 
     <string name="status">Status</string>
     <string name="cat_present_continuous">Present Continuous</string>
-    <string name="card_type1">+, -, ?</string>
+    <string name="card_type1">+,-?</string>
     <string name="title_activity_main2">Main2Activity</string>
 
     <string name="bundle_cards_key">cards</string>

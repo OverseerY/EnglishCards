@@ -9,15 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 public class CardFragment extends Fragment {
     private String title = "";
@@ -64,6 +61,8 @@ public class CardFragment extends Fragment {
         cardTitle.setText(title);
         cardValue.setText(cards.get(cardIndex));
 
+        getActivity().setTitle(title.toUpperCase());
+
         cardNext.setOnClickListener(v -> {
             changeCard(cardIndex);
         });
@@ -103,9 +102,7 @@ public class CardFragment extends Fragment {
             cardIndex++;
             countDownTimer.start();
         } else {
-            cardIndex = 0;
-            cardValue.setText(cards.get(cardIndex));
-            countDownTimer.start();
+            ((MainActivity)getContext()).getSupportFragmentManager().popBackStack();
         }
     }
 

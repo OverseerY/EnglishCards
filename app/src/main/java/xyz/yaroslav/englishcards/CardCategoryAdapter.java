@@ -46,7 +46,6 @@ public class CardCategoryAdapter extends RecyclerView.Adapter<CardCategoryAdapte
 
         holder.tagTitle.setText(category);
         holder.itemView.setOnClickListener(v -> {
-            //Toast.makeText(context, holder.tagTitle.getText().toString(), Toast.LENGTH_SHORT).show();
             displayCardFragment(category);
         });
     }
