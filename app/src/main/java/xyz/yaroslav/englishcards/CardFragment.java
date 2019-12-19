@@ -1,9 +1,6 @@
 package xyz.yaroslav.englishcards;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,17 +12,22 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class CardFragment extends Fragment {
     private String title = "";
 
-    TextView cardTitle;
-    TextView cardValue;
-    ImageView cardNext;
-    TextView cardCounter;
+    private TextView cardValue;
+    private ImageView cardPlayPause;
+    private TextView cardCounter;
 
-    ArrayList<String> cards;
-    CountDownTimer countDownTimer;
+    private Timer timer;
+    private int counter;
+
+    private boolean is_paused;
+
+    private ArrayList<String> cards;
     private int cardIndex;
 
     @Override
@@ -33,19 +35,19 @@ public class CardFragment extends Fragment {
         super.onCreate(savedInstanceState);
         cards = new ArrayList<>();
         cardIndex = 0;
+        counter = 0;
+        is_paused = false;
         prepareCards();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        countDownTimer.cancel();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        countDownTimer.start();
+        cardPlayPause.setImageDrawable(getResources().getDrawable(R.drawable.ic_play, getContext().getTheme()));
+        is_paused = true;
+        if (timer != null) {
+            timer.cancel();
+        }
     }
 
     @Nullable
@@ -53,37 +55,39 @@ public class CardFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_card, container, false);
 
-        cardTitle = root.findViewById(R.id.card_cat);
+        ImageView titleBack = ((MainActivity) getContext()).findViewById(R.id.menu_back);
+        titleBack.setVisibility(View.VISIBLE);
+        titleBack.setOnClickListener(v -> ((MainActivity)getContext()).getSupportFragmentManager().popBackStack());
+        TextView titleMenu = ((MainActivity) getContext()).findViewById(R.id.menu_title);
+        titleMenu.setText(title.toUpperCase());
+
+        TextView cardTitle = root.findViewById(R.id.card_cat);
         cardValue = root.findViewById(R.id.card_body);
-        cardNext = root.findViewById(R.id.card_next);
+        ImageView cardNext = root.findViewById(R.id.card_next);
+        cardPlayPause = root.findViewById(R.id.card_pause);
+
         cardCounter = root.findViewById(R.id.card_counter);
 
         cardTitle.setText(title);
         cardValue.setText(cards.get(cardIndex));
 
-        getActivity().setTitle(title.toUpperCase());
-
         cardNext.setOnClickListener(v -> {
             changeCard(cardIndex);
         });
 
-        countDownTimer = new CountDownTimer(30000, 1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                long value = millisUntilFinished / 1000;
-
-                if (value >= 10) {
-                    cardCounter.setText("00:" + value);
-                } else {
-                    cardCounter.setText("00:0" + value);
-                }
+        cardPlayPause.setOnClickListener(v -> {
+            if (is_paused){
+                cardPlayPause.setImageDrawable(getResources().getDrawable(R.drawable.ic_pause, getContext().getTheme()));
+                is_paused = false;
+                runTimer();
+            } else {
+                cardPlayPause.setImageDrawable(getResources().getDrawable(R.drawable.ic_play, getContext().getTheme()));
+                is_paused = true;
+                timer.cancel();
             }
+        });
 
-            @Override
-            public void onFinish() {
-                changeCard(cardIndex);
-            }
-        }.start();
+        runTimer();
 
         return root;
     }
@@ -97,15 +101,37 @@ public class CardFragment extends Fragment {
     }
 
     private void changeCard(int index) {
+        counter = 0;
+        timer.cancel();
         if ((index + 1) < cards.size()) {
             cardValue.setText(cards.get(index + 1));
             cardIndex++;
-            countDownTimer.start();
+            cardPlayPause.setImageDrawable(getResources().getDrawable(R.drawable.ic_pause, getContext().getTheme()));
+            is_paused = false;
+            runTimer();
         } else {
             ((MainActivity)getContext()).getSupportFragmentManager().popBackStack();
         }
     }
 
+    private void runTimer() {
+        Timer timer = new Timer();
+        this.timer = timer;
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                counter++;
+                if (counter >= 10) {
+                    cardCounter.setText("00:" + counter);
+                } else {
+                    cardCounter.setText("00:0" + counter);
+                }
+                if (counter == 60) {
+                    changeCard(cardIndex);
+                }
+            }
+        }, 0, 1000);
+    }
 }
 
 

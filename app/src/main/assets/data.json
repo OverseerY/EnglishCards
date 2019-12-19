@@ -21,6 +21,34 @@
 			"value": "?"
 		},
 		{
+			"category": "present simple",
+			"value": "when"
+		},
+		{
+			"category": "present simple",
+			"value": "what (что)"
+		},
+		{
+			"category": "present simple",
+			"value": "what (какой)"
+		},
+		{
+			"category": "present simple",
+			"value": "for what"
+		},
+		{
+			"category": "present simple",
+			"value": "how often"
+		},
+		{
+			"category": "present simple",
+			"value": "whose"
+		},
+		{
+			"category": "present simple",
+			"value": "which"
+		},
+		{
 			"category": "past simple",
 			"value": "+"
 		},
@@ -59,6 +87,34 @@
 		{
 			"category": "present continuous",
 			"value": "?"
+		},
+		{
+			"category": "present continuous",
+			"value": "when"
+		},
+		{
+			"category": "present continuous",
+			"value": "what (что)"
+		},
+		{
+			"category": "present continuous",
+			"value": "what (какой)"
+		},
+		{
+			"category": "present continuous",
+			"value": "for what"
+		},
+		{
+			"category": "present continuous",
+			"value": "how often"
+		},
+		{
+			"category": "present continuous",
+			"value": "whose"
+		},
+		{
+			"category": "present continuous",
+			"value": "which"
 		},
 		{
 			"category": "future simple",
@@ -139,6 +195,34 @@
 		{
 			"category": "present perfect",
 			"value": "?"
+		},
+		{
+			"category": "present perfect",
+			"value": "when"
+		},
+		{
+			"category": "present perfect",
+			"value": "what (что)"
+		},
+		{
+			"category": "present perfect",
+			"value": "what (какой)"
+		},
+		{
+			"category": "present perfect",
+			"value": "for what"
+		},
+		{
+			"category": "present perfect",
+			"value": "how often"
+		},
+		{
+			"category": "present perfect",
+			"value": "whose"
+		},
+		{
+			"category": "present perfect",
+			"value": "which"
 		},
 		{
 			"category": "past perfect",

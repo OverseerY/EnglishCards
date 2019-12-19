@@ -5,7 +5,9 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,10 +33,16 @@ public class CategoryFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_categories, container, false);
 
+        ImageView titleBack = ((MainActivity) getContext()).findViewById(R.id.menu_back);
+        titleBack.setVisibility(View.GONE);
+        titleBack.setOnClickListener(v -> ((MainActivity)getContext()).getSupportFragmentManager().popBackStack());
+        TextView titleMenu = ((MainActivity) getContext()).findViewById(R.id.menu_title);
+        titleMenu.setText(getString(R.string.app_name));
+
+
         progressBar = root.findViewById(R.id.cat_progressbar);
         recyclerView = root.findViewById(R.id.categories_items);
 
-        getActivity().setTitle(getString(R.string.app_name));
         prepareCategories();
 
         return root;
